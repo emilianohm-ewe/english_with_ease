@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ewe-website-mock</title>
+    <script type="module" crossorigin src="/assets/index-Cow3Jf43.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CJEiU6XQ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function setupDownloadButton() {
+        const buttons = document.querySelectorAll('button');
+        let found = false;
+        
+        buttons.forEach(btn => {
+          const text = btn.textContent.toLowerCase();
+          if (text.includes('descargar') || text.includes('download')) {
+            // Remove old listeners by cloning
+            const newBtn = btn.cloneNode(true);
+            btn.parentNode.replaceChild(newBtn, btn);
+            
+            // Add new listener
+            newBtn.addEventListener('click', function(e) {
+              e.stopPropagation();
+              e.preventDefault();
+              
+              // Create and trigger download
+              const link = document.createElement('a');
+              link.href = '/English_with_ease_draft.html';
+              link.download = 'English_with_ease_draft.html';
+              link.style.display = 'none';
+              document.body.appendChild(link);
+              
+              setTimeout(() => {
+                link.click();
+                document.body.removeChild(link);
+              }, 100);
+            });
+            
+            console.log('Download button found and configured:', newBtn.textContent);
+            found = true;
+          }
+        });
+        
+        if (!found) {
+          // Try again if button not found yet
+          setTimeout(setupDownloadButton, 1000);
+        }
+      }
+      
+      // Wait for DOM to be ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupDownloadButton);
+      } else {
+        setupDownloadButton();
+      }
+      
+      // Also check periodically in case React updates the DOM
+      setInterval(setupDownloadButton, 3000);
+    </script>
+  </body>
+</html>
