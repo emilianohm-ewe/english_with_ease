@@ -50,6 +50,7 @@ Chart Choices:
 4. CEFR Flight Path -> Goal: Change (Time) -> Stepped Line Chart (Chart.js) -> Shows rigid, auditable milestones. NO SVG.
 -->
 <!-- I confirm that NEITHER Mermaid JS NOR SVG were used anywhere in the output. -->
+<!-- COLOR ALIGNMENT CORRECTED: El Ciclo section now matches chart colors -->
 
 <div class="min-h-screen pb-12">
     <!-- Header -->
@@ -123,14 +124,16 @@ Chart Choices:
                 <div class="space-y-6 relative">
                     <div class="line-connector hidden md:block"></div>
                     
-                    <div class="bg-white p-5 rounded-xl border-2 border-slate-100 shadow-sm relative z-10 flex gap-4">
-                        <div class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-lg shrink-0">1</div>
+                    <!-- CORRECTED: Card 1 - Input Packs now uses Emerald (#10B981) -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-emerald-500 shadow-md relative z-10 flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-lg shrink-0">1</div>
                         <div>
-                            <h3 class="font-bold text-slate-800 text-lg">Input Packs (Asincrónico)</h3>
-                            <p class="text-sm text-slate-500 mt-1">Plataforma 24/7. Adquisición de <em>Chunks</em> y vocabulario antes de la clase.</p>
+                            <h3 class="font-bold text-emerald-700 text-lg">Input Packs (Asincrónico)</h3>
+                            <p class="text-sm text-slate-600 mt-1">Plataforma 24/7. Adquisición de <em>Chunks</em> y vocabulario antes de la clase.</p>
                         </div>
                     </div>
 
+                    <!-- Card 2 - Live Session (Indigo) - maintains original alignment -->
                     <div class="bg-white p-5 rounded-xl border-2 border-indigo-500 shadow-md relative z-10 flex gap-4 transform md:translate-x-4">
                         <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shrink-0">2</div>
                         <div>
@@ -139,11 +142,12 @@ Chart Choices:
                         </div>
                     </div>
 
-                    <div class="bg-white p-5 rounded-xl border-2 border-slate-100 shadow-sm relative z-10 flex gap-4">
-                        <div class="w-12 h-12 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold text-lg shrink-0">3</div>
+                    <!-- CORRECTED: Card 3 - Mini-Tasks now uses Amber (#F59E0B) -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-amber-500 shadow-md relative z-10 flex gap-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-lg shrink-0">3</div>
                         <div>
-                            <h3 class="font-bold text-slate-800 text-lg">Mini-Tasks & Quizzes</h3>
-                            <p class="text-sm text-slate-500 mt-1">Evidencia semanal auditable para alimentar tu portafolio de progreso.</p>
+                            <h3 class="font-bold text-amber-700 text-lg">Mini-Tasks & Quizzes</h3>
+                            <p class="text-sm text-slate-600 mt-1">Evidencia semanal auditable para alimentar tu portafolio de progreso.</p>
                         </div>
                     </div>
                 </div>
